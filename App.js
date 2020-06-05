@@ -1,19 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Image, View} from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <SafeAreaView>
+      <View styles={styles.body}>
+        <Image source={require("./assets/icon.png")} />
+      </View>
+      <View style={styles.body}>
+        <Text>hello world</Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    body: {
+        flex: 1,
+        backgroundColor: 'blue',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 });
